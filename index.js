@@ -23,6 +23,7 @@ function addSubmission(array, newName, newScore, newDate) {
         pass = false;
     }
 
+    // Great job! You remembered to instantiate a new class here.
     let newSubmission = new assignment(newName, newScore, newDate, pass);
     array.push(newSubmission);
 }
@@ -50,11 +51,12 @@ function editSubmission(array, index, score) {
 }
 
 function findSubmissionByName(array, name) {
-    let FSBN = array.find(function (submission) {
-        return submission.name == name
+    // One way of simplifying, which is completely optional:
+    // Skip the intermediary `let` variables, and go right to the
+    // return statement.
+    return array.find(function (submission) {
+        return submission.name == name;
     });
-	console.log(FSBN);
-    return FSBN;
 }
 
 function findLowestScore(array) {
